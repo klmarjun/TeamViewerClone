@@ -1,0 +1,11 @@
+# Ignore Node modules
+node_modules/
+
+# Ignore lockfile if not using lockfiles
+package-lock.json
+
+# Ignore build output from React app (optional)
+remote-screen-app/build/
+
+# Ignore any nested Git repo
+remote-screen-app/.git/
