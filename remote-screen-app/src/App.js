@@ -1,6 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
 
-const WS_URL = "teamviewerclone-production.up.railway.app";
+// in code
+const WS_URL = process.env.REACT_APP_WS_URL || "wss://teamviewerclone-production.up.railway.app";
+
 
 function App() {
   const canvasRef = useRef(null);
