@@ -90,7 +90,7 @@ wss.on("connection", (ws) => {
         if (viewer.readyState === WebSocket.OPEN) {
           viewer.send(JSON.stringify({
             type: "control-status",
-            allowed: session.controlAllowed
+            allowed: true
           }));
         }
       });
