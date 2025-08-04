@@ -1,11 +1,32 @@
-# Ignore Node modules
+# Node / JS
 node_modules/
-
-# Ignore lockfile if not using lockfiles
+# if you commit lockfiles you can remove next line; usually package-lock.json is committed for reproducibility
 package-lock.json
 
-# Ignore build output from React app (optional)
+# React build output
 remote-screen-app/build/
 
-# Ignore any nested Git repo
+# Env files
+.env
+.env.local
+.env.*.local
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
+
+# Python agent
+remote-control-agent/venv/
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ignore any leftover git submodule metadata if you had one before
 remote-screen-app/.git/
+
+# Optional: ignore local frontend dev artifacts
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
