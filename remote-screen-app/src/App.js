@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import ControlPanel from "./ControlPanel";
 
 const WS_URL = process.env.REACT_APP_WS_URL || "wss://teamviewerclone-production.up.railway.app";
 
@@ -304,4 +305,3 @@ function App() {
 }
 
 export default App;
-s

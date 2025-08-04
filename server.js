@@ -100,9 +100,12 @@ wss.on("connection", (ws) => {
 
     // === Viewer input events ===
     if (data.type === "input" && role === "viewer" && sessionCode) {
+      console.log("Server received input from viewer:", data); 
+
       const session = sessions[sessionCode];
       if (!session) return;
       if (session.controlAllowed && session.sharer && session.sharer.readyState === WebSocket.OPEN) {
+        console.log("Forwarding input to sharer:", data); 
         session.sharer.send(JSON.stringify({
           type: "input",
           payload: data
@@ -110,7 +113,6 @@ wss.on("connection", (ws) => {
       }
       return;
     }
-
     // (Future) other message types...
   });
 
